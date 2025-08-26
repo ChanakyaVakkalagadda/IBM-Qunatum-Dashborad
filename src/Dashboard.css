@@ -1,0 +1,101 @@
+/* Dashboard with a dark theme and left-aligned elements */
+.dashboard {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #00e0ff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the job information and graph using flexbox */
+.result-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Headings for sections */
+h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the information text */
+.info-text {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  flex: 1;
+  margin-right: 20px;
+  max-width: 50%; /* Limits the info text width to half the container */
+}
+
+.info-text p {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+/* Styling for the JSON data block */
+pre {
+  background-color: #000;
+  color: #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+/* Graph container */
+.chart-container {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  flex: 1;
+  max-width: 50%; /* Limits the chart width to half the container */
+}
+
+/* Recharts-specific styling for the graph bars and text */
+.recharts-bar {
+  fill: #007bff;
+}
+
+.recharts-xAxis .recharts-label {
+  fill: #f0f0f0;
+}
+
+.recharts-yAxis .recharts-label {
+  fill: #f0f0f0;
+}

@@ -114,9 +114,9 @@ export default function QuantumDashboard() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Online Voting System & Analytics
+              IBM Quantum Jobs Live Dashboard
             </h1>
-            <p className="text-slate-300 mt-2">Real-time monitoring of voters</p>
+            <p className="text-slate-300 mt-2">Real-time monitoring of quantum computing jobs</p>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-sm text-slate-400">Last updated: {lastUpdate.toLocaleTimeString()}</div>
@@ -136,7 +136,7 @@ export default function QuantumDashboard() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           {[
-            { label: 'Total Voters', value: stats.totalJobs, icon: <BarChart3 className="w-8 h-8 text-blue-400" /> },
+            { label: 'Total Jobs', value: stats.totalJobs, icon: <BarChart3 className="w-8 h-8 text-blue-400" /> },
             { label: 'Running', value: <span className="text-blue-400">{stats.runningJobs}</span>, icon: <Activity className="w-8 h-8 text-blue-400" /> },
             { label: 'Queued', value: <span className="text-yellow-400">{stats.queuedJobs}</span>, icon: <Clock className="w-8 h-8 text-yellow-400" /> },
             { label: 'Completed', value: <span className="text-green-400">{stats.completedJobs}</span>, icon: <CheckCircle className="w-8 h-8 text-green-400" /> },
@@ -179,7 +179,7 @@ export default function QuantumDashboard() {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2"><PieChart className="w-5 h-5" />Voter Status Analytics</h2>
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2"><PieChart className="w-5 h-5" />Job Status Distribution</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
                 <RechartsPieChart>
@@ -228,7 +228,7 @@ export default function QuantumDashboard() {
         {/* Devices + Live Jobs */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2"><Cpu className="w-5 h-5" />Voting Efficiency</h2>
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2"><Cpu className="w-5 h-5" />Quantum Devices</h2>
             <div className="space-y-4">
               {devices.map(d => (
                 <div key={d.name} className="bg-slate-700/30 rounded-lg p-4 hover:bg-slate-700/50 transition-all duration-300">
@@ -270,7 +270,7 @@ export default function QuantumDashboard() {
 
           <div className="lg:col-span-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold flex items-center gap-2"><Activity className="w-5 h-5" />Live Poling ({filteredJobs.length})</h2>
+              <h2 className="text-xl font-semibold flex items-center gap-2"><Activity className="w-5 h-5" />Live Jobs ({filteredJobs.length})</h2>
             </div>
             <div className="space-y-2 max-h-96 overflow-y-auto">
               {filteredJobs.slice(0, 20).map(job => (
